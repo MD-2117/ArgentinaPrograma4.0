@@ -1,2 +1,6 @@
 primer cambio en archivo
+<<<<<<< HEAD
 intento de cambio local
+=======
+segundo cambio
+>>>>>>> b31abc743470382bc9554ee962bb6ab9679965ca
