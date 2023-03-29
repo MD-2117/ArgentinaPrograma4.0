@@ -1,18 +1,18 @@
 public class ItemCarrito {
     private int cantidad;
     private Double PrecioTotal;
-    Producto prod1= new Producto("cepillo", 250.0, 2);
-    Producto prod2= new Producto("pasta de dientes",500.25,1);
+    Producto producto;
 
-
-    public ItemCarrito(Producto prod1, int cantidad) {
+    public ItemCarrito(Producto prod1, int cant1) {
+        this.producto=prod1;
+        this.cantidad=cant1;
     }
 
     public int getCantidad(){
         return this.cantidad;
     }
     public double getPrecioTotal() {
-        this.PrecioTotal=prod1.getPrecio()*cantidad;
+        this.PrecioTotal=producto.getPrecio()*this.cantidad;
         return this.PrecioTotal;
     }
 }

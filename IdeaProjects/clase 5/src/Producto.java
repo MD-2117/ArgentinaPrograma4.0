@@ -4,32 +4,29 @@ import java.util.List;
 import java.time.LocalDate;
 //
 public class Producto {
-    private  Integer cantidad;
-    private String nombre;
-    private String descripcion;
-    private LocalDate fechaAlta;
-    private Integer pesoKg;
-    private Double precio;
-    private static final Double minPrecio = 0.1;
-    public Producto(String nombre, Double minPrecio, Integer cantidad) {
-        this.nombre = nombre;
-        this.fechaAlta = LocalDate.now();
-        this.precio = minPrecio;
+    String nombre;
+    int codigo;
+    Double precio;
+    int cantidad;
+    Producto(int cantP,Double pP,String nP){
+        this.precio=pP;
+        this.nombre=nP;
+        this.cantidad=cantP;
     }
+
+    public Double getPrecio() {
+        return precio;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
     public String getNombre() {
-        return this.nombre;
+        return nombre;
     }
-    public String getDescripcion() {
-        return this.descripcion;
-    }
-    public Double getPrecio(){
-        return this.precio;
-    }
-    public Integer getCantidad(){return this.cantidad;}
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-    public void  setPrecio(double v){
-        this.precio= v;
+
+    public int getCantidad() {
+        return cantidad;
     }
 }
